@@ -1,0 +1,30 @@
+Pasos para CRUD en Laravel
+1- Crear migracion
+	añadir datos y ejecutar
+	se puede crear el modelo y migracion de una sola vez con
+	php artisan make:model Hola -m
+	php artisan make:model Hola -mc para controlador ademas
+2- Crear modelo
+	añadir atributos y guardar
+3- Crear controlador y sus funciones
+	1-Cambiar $id por Modelo $modelo
+	2-Añadir return view a cada función
+
+4- Crear vista y sus componentes
+5- Crear ruta
+
+
+Para actualizar sistema en otro Server
+1-Conversor a rar del sistema local
+2-En PC servidor descomprimir el rar
+3-Modificar siempre el .env con datos de la DB
+
+
+Para hacer COPY de CSV a una tabla en POSTGRESQL
+1-Tener el archivo CSV con los datos a importar, y tambien las columnas
+2-Hacer COPY en  script eligiendo las columnas a importar con el sgte codigo:
+COPY persons(first_name, last_name, dob, email)
+FROM 'C:\sampledb\persons.csv'
+DELIMITER ','
+CSV HEADER
+encoding 'windows-1251';
